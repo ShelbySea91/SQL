@@ -1,0 +1,22 @@
+CREATE TABLE beauty (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, brand TEXT);
+INSERT INTO beauty VALUES (1, "mascara", 10, 20, "Tarte");
+INSERT INTO beauty VALUES (2, "lipstick", 10, 25, "Milk Makeup");
+INSERT INTO beauty VALUES (3, "eyeshadow", 30, 40, "Hourglass");
+INSERT INTO beauty VALUES (4, "lipgloss", 15, 25, "Tarte");
+INSERT INTO beauty VALUES (5, "eyeliner", 18, 20, "Clinique");
+INSERT INTO beauty VALUES (6, "perfume", 20, 60, "Chanel");
+INSERT INTO beauty VALUES (7, "shampoo", 10, 30, "Verb");
+INSERT INTO beauty VALUES (8, "conditioner", 10, 30, "Verb");
+INSERT INTO beauty VALUES (9, "body wash", 15, 10, "Method");
+INSERT INTO beauty VALUES (10, "blow dryer", 10, 70, "Redken");
+INSERT INTO beauty VALUES (11, "hair spray", 15, 20, "Amika");
+INSERT INTO beauty VALUES (12, "hair brush", 20, 10, "Amika");
+INSERT INTO beauty VALUES (13, "cologne", 15, 45, "Armani");
+INSERT INTO beauty VALUES (14, "face wash", 14, 50, "Biossance");
+INSERT INTO beauty VALUES (15, "moisturizer", 15, 60, "Fresh");
+SELECT * FROM beauty;
+
+SELECT * FROM beauty ORDER BY price;
+
+SELECT SUM(price) FROM beauty;
+SELECT SUM(price) FROM beauty WHERE brand="Tarte";
