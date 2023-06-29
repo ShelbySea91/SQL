@@ -1,0 +1,48 @@
+/* Create table about the people and what they do here */
+CREATE TABLE Famous_People (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, birthplace TEXT);
+INSERT INTO Famous_People (name, birthplace) VALUES ("George Clooney", "Lexington, KY");
+INSERT INTO Famous_People (name, birthplace) VALUES ("Angelina Jolie", "Los Angeles, CA");
+INSERT INTO Famous_People (name, birthplace) VALUES ("Matt Damon", "Cambridge, MA");
+INSERT INTO Famous_People (name, birthplace) VALUES ("Andrew Garfield", "Los Angeles, CA");
+INSERT INTO Famous_People (name, birthplace) VALUES ("Brad Pitt", "Shawnee, OK");
+
+
+CREATE TABLE Acted (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, title TEXT);
+INSERT INTO Acted (person_id, title) VALUES (1, "Ocean's Eleven");
+INSERT INTO Acted (person_id, title) VALUES (1, "Gravity");
+INSERT INTO Acted (person_id, title) VALUES (1, "Up in the Air");
+INSERT INTO Acted (person_id, title) VALUES (2, "Eternals");
+INSERT INTO Acted (person_id, title) VALUES (2, "Salt");
+INSERT INTO Acted (person_id, title) VALUES (2, "Mr and Mrs Smith");
+INSERT INTO Acted (person_id, title) VALUES (3, "Air");
+INSERT INTO Acted (person_id, title) VALUES (3, "Martian");
+INSERT INTO Acted (person_id, title) VALUES (3, "Ocean's Eleven");
+INSERT INTO Acted (person_id, title) VALUES (4, "The Amazing Spiderman");
+INSERT INTO Acted (person_id, title) VALUES (4, "The Social Network");
+INSERT INTO Acted (person_id, title) VALUES (4, "Never Let Me Go");
+INSERT INTO Acted (person_id, title) VALUES (5, "Ocean's Eleven");
+INSERT INTO Acted (person_id, title) VALUES (5, "Mr and Mrs Smith");
+INSERT INTO Acted (person_id, title) VALUES (5, "Troy");
+
+CREATE TABLE Directed (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, title TEXT);
+INSERT INTO Directed (person_id, title) VALUES (1, "Leatherheads");
+INSERT INTO Directed (person_id, title) VALUES (1, "The Ides of March");
+INSERT INTO Directed (person_id, title) VALUES (2, "First They Killed My Father");
+INSERT INTO Directed (person_id, title) VALUES (2, "Unbroken");
+SELECT * FROM Famous_People;
+SELECT * FROM Acted;
+SELECT * FROM Directed;
+
+SELECT *
+FROM Famous_People
+JOIN Acted
+ON Famous_People.id=Acted.person_id;
+
+SELECT name as Born_In_LA FROM Famous_People
+WHERE birthplace="Los Angeles, CA";
+
+
+
+
+
+
