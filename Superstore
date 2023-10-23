@@ -49,3 +49,21 @@ WHERE item_name = 'Air Purifier';
 SELECT AVG(price)
 FROM superstore
 WHERE category = 'Electronics';
+
+SELECT MAX(price), item_name
+FROM superstore;
+
+SELECT SUM(price), category
+FROM superstore
+WHERE category = 'Furnishings';
+
+SELECT price, category, item_name
+FROM superstore
+ORDER BY price desc;
+
+SELECT MIN(price), item_name
+FROM superstore;
+
+SELECT AVG(price)
+FROM superstore
+WHERE category = 'Electronics';
