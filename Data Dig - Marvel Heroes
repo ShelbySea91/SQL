@@ -47,19 +47,26 @@ INSERT INTO marvels VALUES(24, "Venon", 78, "Neutral", "Male", 1.90, 118, "EUA",
 INSERT INTO marvels VALUES(25, "Juggernaut", 76, "Neutral", "Male", 2.87, 862, "EUA", 2, 7, 2, 7, 1, 4);
 INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA", 5, 2, 2, 2, 5, 3);
 
-SELECT name as popular_women FROM marvels WHERE gender="Female" GROUP BY popularity;
+SELECT name as popular_women 
+FROM marvels 
+WHERE gender="Female" 
+GROUP BY popularity;
 
 SELECT name as good_durable_popular FROM marvels 
 WHERE alignment="Good"
 AND durability >4
 AND popularity <10;
 
-SELECT name as Intelligence_Greater_Than_3 FROM marvels 
+SELECT name as Intelligence_Greater_Than_3 
+FROM marvels 
 GROUP BY name
-HAVING intelligence>3;
+HAVING intelligence >= 3;
 
-SELECT AVG(weight_kg) from marvels;
-SELECT AVG(intelligence) from marvels;
+SELECT AVG(weight_kg) 
+from marvels;
+
+SELECT AVG(intelligence) 
+from marvels;
 
 
 
