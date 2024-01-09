@@ -14,9 +14,16 @@ INSERT INTO beauty VALUES (12, "hair brush", 20, 10, "Amika");
 INSERT INTO beauty VALUES (13, "cologne", 15, 45, "Armani");
 INSERT INTO beauty VALUES (14, "face wash", 14, 50, "Biossance");
 INSERT INTO beauty VALUES (15, "moisturizer", 15, 60, "Fresh");
-SELECT * FROM beauty;
 
-SELECT * FROM beauty ORDER BY price;
+SELECT * 
+FROM beauty;
 
-SELECT SUM(price) FROM beauty;
-SELECT SUM(price) FROM beauty WHERE brand="Tarte";
+SELECT * 
+FROM beauty 
+ORDER BY price;
+
+SELECT SUM(price) 
+FROM beauty;
+
+SELECT SUM(price) 
+FROM beauty WHERE brand="Tarte";
