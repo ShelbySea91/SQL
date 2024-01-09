@@ -59,11 +59,14 @@ VALUES
 
 
 
-SELECT count(*) FROM "netflix_people";
+SELECT count(*) 
+FROM "netflix_people";
 
-SELECT * FROM "netflix_people" LIMIT 5;
+SELECT * 
+FROM "netflix_people" LIMIT 5;
 
-SELECT * FROM "netflix_titles_info" LIMIT 5;
+SELECT * 
+FROM "netflix_titles_info" LIMIT 5;
 
 SELECT people.show_id, people.director, titles.title, titles.type
 FROM "netflix_people" people
