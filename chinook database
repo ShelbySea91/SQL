@@ -118,7 +118,7 @@ WHERE emp.Title = 'Sales Support Agent'
 GROUP BY emp.FirstName;
 
 
-Here I am showing which sales agent made the most dollars in sales in 2009?
+Here I am showing which sales agent made the most dollars in sales in 2009.
 
 SELECT emp.FirstName, emp.LastName,
 ROUND(SUM(Inv.Total), 2) as 'Total Sales' 
